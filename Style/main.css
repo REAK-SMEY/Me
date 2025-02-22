@@ -1,0 +1,331 @@
+.container > main{
+    width: 100%;
+   /* height: 100vh;*/
+    /*background-color: pink;*/
+}
+.container > main > .hero{
+    width: 100%;
+   /* height: 100%;*/
+   /* background-color: green;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > main > .hero > .logo,
+.container > main > .hero > .content-text{
+    width: 100%;
+   /* height: 100%;*/
+   /* background-color: aquamarine;*/
+}
+
+.container > main  > .hero > .logo{
+    width: 100%;
+    display: grid;
+    place-content: center;
+    padding: 40px;
+}
+.container > main  > .hero > .logo > .profile{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+   /* background-color: aqua;*/
+    position: relative;
+    box-shadow: 0 0 10px grey;
+}
+.container > main  > .hero > .logo > .profile::before,
+.container > main  > .hero > .logo > .profile::after{
+    content:" ";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    border-radius:50%;
+    background-color: rgb(226, 211, 211);
+    z-index: -1;
+}
+.container > main  > .hero > .logo > .profile::before{
+    bottom: -10px;
+    left: -10px;
+    
+}
+.container > main  > .hero > .logo > .profile::after{
+    background-color: rgb(231, 231, 231);
+    top: -15px;
+    right: -10px;
+}
+.container > main  > .hero > .logo > .profile > img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container > main  > .hero > .content-text > .text{
+    width: 100%;
+    text-align: center;
+    
+}
+.container > main  > .hero > .content-text > .text > h1{
+    font-weight: 600;
+    font-size: clamp(30px,2vw,22px);
+    padding: 5px 15px;
+}
+.container > main  > .hero > .content-text > .text > p{
+    padding: 0 20px;
+   color: rgb(138, 136, 136);
+   margin-bottom: 8px;
+}
+.container > main  > .hero > .content-text > .text > button{
+    padding: 8px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 2px solid rgb(255, 150, 167);
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.container > main  > .hero > .content-text > .text > button::before{
+    content:" ";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color:rgb(255, 150, 167);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    border-radius: 0 50px 50px 0px;
+}
+.container > main  > .hero > .content-text > .text > button:hover::before{
+    width: 100%;
+    border-radius: 0;
+}
+.container > main  > .hero > .content-text > .text > button:hover{
+    color: white;
+}
+/*----------------------------exp content-----------------------*/
+.container > main > .exp{
+    width: 100%;
+    /*height: 60vh;*/
+    background-color: rgba(255, 150, 167, 0.473);
+    margin-top: 15px;
+    padding: 25px 20px;
+
+}
+.container > main > .exp > p{
+    text-align: center;
+    padding-bottom: 18px;
+    font-size: clamp(18px,2vw,20px);
+}
+.container > main > .exp > .row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container > main > .exp > .row > .card{
+    width: 100%;
+    /*height: 250px;*/
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.container > main > .exp > .row > .card > .title-card{
+    font-size: clamp(22px,2vw,30px);
+    font-weight: 600;
+}
+.container > main > .exp > .row > .card > .year{
+    padding: 18px 0;
+}
+.container > main > .exp > .row > .card > .year > span:nth-child(1){
+    background-color:rgb(255, 150, 167) ;
+    color: white;
+    padding: 2px 20px;
+    border-radius: 20px;
+}
+.container > main > .exp > .row > .card > .des{
+    color: rgb(138, 136, 136);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:4 ;
+    line-clamp:4;
+    -webkit-box-orient: vertical;
+}
+.container > main > .feature{
+    width: 100%;
+   /* height: 50vh;
+    background-color: aqua;*/
+    padding: 15px 20px;
+}
+.container > main > .feature > .row{
+    width: 100%;
+    height: 100%;
+  /*  background-color: azure;*/
+}
+.container > main > .feature > .row  > p{
+    text-align: center;
+    padding-bottom: 18px;
+    font-size: clamp(18px,2vw,20px);
+    font-weight: 500;
+}
+.container > main > .feature > .row > .card{
+    width: 100%;
+    border-bottom: 2px solid rgba(201, 192, 192, 0.596);
+
+}
+.container > main > .feature > .row > .card > .image{
+    width: 100%;
+    height: 280px;
+    background-color: blueviolet;
+}
+.container > main > .feature > .row > .card > .image > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.container > main > .feature > .row > .card > .card-body > .title-card{
+    font-size: clamp(26px,3vw,35px);
+    font-weight: 500;
+    margin: 5px 0;
+}
+.container > main > .feature > .row > .card > .card-body > .des{
+    color:  rgba(177, 160, 160, 0.712);
+    padding-top: 5px;
+    color: rgb(138, 136, 136);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp:5 ;
+    line-clamp:5;
+    -webkit-box-orient: vertical;
+}
+
+
+
+/*------------Screen ipad--------------------*/
+@media(min-width:768px){
+    .container > main > .hero > .logo{
+        width: 45%;
+        height: 100%;
+        /*background-color: aquamarine;*/
+    }
+    .container > main > .hero > .content-text{
+        width: 55%;
+        height: 100%;
+       /* background-color: red;*/
+    }
+    .container > main > .hero{
+        padding: var(--padding-md);
+    }
+    .container > main  > .hero > .logo > .profile{
+        width: 200px;
+        height: 200px;
+    }
+    .container > main  > .hero > .content-text > .text{
+        text-align: left;
+    }
+    .container > main  > .hero > .content-text > .text > p{
+padding: 10px 0px;
+    }
+    .container > main > .exp{
+        padding: var(--padding-md);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container > main > .exp > .row > .card{
+        width: 48%;
+
+    }
+    .container > main > .exp > p{
+        text-align: left;
+    }
+    /*-------------------------fEATURE CONTENT------------------------------*/
+
+    .container > main > .feature {
+        padding: var(--padding-md);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .container > main > .feature > .row > .card {
+        display: flex;
+    }
+    .container > main > .feature > .row > .card > .image{
+        width: 40%;
+        height: 210px;
+        margin-right: 20px;
+    }
+    .container > main > .feature > .row > .card > .card-body{
+        width: 60%;
+    }
+    .container > main > .feature > .row  > p{
+        text-align: left;
+    }
+    
+
+   
+/*------------------Screen laptop-------------------*/
+}
+@media(min-width:992px){
+    .container > main > .hero {
+        padding: var(--padding-lg);
+    }
+    .container > main  > .hero > .logo{
+        padding: 150px;
+    }
+    .container > main  > .hero > .logo > .profile{
+        width: 440px;
+        height: 400px;
+    }
+    .container > main > .hero > .content-text{
+        padding: 150px 20px;
+        padding-right: 160px;
+        display: flex;
+        align-items: center;
+    }
+    .container > main  > .hero > .content-text > .text > h1{
+        line-height: 72px;
+      
+    }
+    .container > main  > .hero > .content-text > .text > p{
+        padding: 20px 0;
+    }
+    /*-------------epx content-----------*/
+    .container > main > .exp{
+        padding: var(--padding-lg);
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .container > main > .exp > .row > .card{
+        padding: 40px;
+
+    }
+    .container > main > .exp > .row > .card > .des{
+        color: rgb(138, 136, 136);
+        overflow: block;
+    }
+
+        /*-------------------------fEATURE CONTENT------------------------------*/
+        .container > main > .feature {
+            padding: var(--padding-lg);
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .container > main > .feature > .row > .card > .image{
+            width: 30%;
+            height: 210px;
+            margin-right: 20px;
+        }
+        .container > main > .feature > .row > .card > .card-body{
+            width: 0%7;
+        }
+        .container > main > .feature > .row > .card > .card-body > .des{
+    
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp:5 ;
+            line-clamp:5;
+            -webkit-box-orient: vertical;
+        }
+
+
+
+}
